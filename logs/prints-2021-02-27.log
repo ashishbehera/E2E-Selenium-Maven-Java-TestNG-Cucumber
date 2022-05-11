@@ -1,0 +1,6 @@
+08:23:20.069 [TestNG-tests-2] INFO  pratice.ValidateNavigationBar - Driver is initialized
+08:23:30.390 [TestNG-tests-2] INFO  pratice.ValidateNavigationBar - Navigate to Home Page
+08:23:30.422 [TestNG-tests-2] INFO  pratice.ValidateNavigationBar - Sucessfully validated text message
+08:23:31.062 [TestNG-tests-1] INFO  pratice.ValidateNavigationBar - Navigation Bar is displayed
+08:23:32.749 [TestNG-tests-3] INFO  pratice.ValidateNavigationBar - Non Restricted User
+08:23:37.349 [TestNG-tests-3] INFO  pratice.ValidateNavigationBar - Restricted User
