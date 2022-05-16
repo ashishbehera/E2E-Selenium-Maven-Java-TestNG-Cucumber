@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 //@RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/java/features"
 ,glue = "stepDefinitions"
-,tags ="@smokeTest"
+,tags ="@smokeTestDemo"
 ,   plugin = {"pretty",
         "html:target/cucumber-reports/cucumber.html",
         "json:target/cucumber-reports/cucumber.json"

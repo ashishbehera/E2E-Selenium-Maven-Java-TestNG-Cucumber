@@ -2,7 +2,7 @@ Feature: Login into Amazon Website
 
 
 
-@smokeTest
+@smokeTestDemo
 Scenario: Navigating to Signin Page
 	Given Initialize the browser with chrome for Amazon Website
 	And Navigate to "https://www.amazon.co.uk/" Amazon Website
