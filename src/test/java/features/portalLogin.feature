@@ -5,7 +5,7 @@ Background:
 	When navigate to link 
 	Then validate the link 
 
-@portalTest	
+@smokeTest
 Scenario:
 		Given Initialize the browser with chrome 
 	And Navigate to "http://qaclickacademy.com/" Site 
@@ -15,7 +15,7 @@ Scenario:
 	Then verify that user is successful logged in <loginStaus> 
 	And close the browser 
 	
-@portalLoginTest
+@smokeTest
 Scenario Outline: Positive test validating login 
 	Given Initialize the browser with chrome 
 	And Navigate to "http://qaclickacademy.com/" Site 
@@ -32,7 +32,7 @@ Scenario Outline: Positive test validating login
 		|test79@gmail.com|129456  |true      |
 		|test69@gmail.com|127456  |true      |
 		
-		@portalTest
+		@smokeTest
 		Scenario Outline: Negative test validating login 
 			Given Initialize the browser with chrome 
 			And Navigate to "http://qaclickacademy.com/" Site 

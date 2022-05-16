@@ -16,7 +16,7 @@ public class ExtentReporterNG {
 		reporter.config().setDocumentTitle("Test Results");
 		extent =new ExtentReports();
 		extent.attachReporter(reporter);
-		extent.setSystemInfo("Tester", "Ashish Behera");
+		extent.setSystemInfo("QE Lead", "Ashish Behera");
 		
 		return extent;
 

@@ -5,7 +5,7 @@ import io.cucumber.java.Before;
 
 public class Hooks {
 	
-	@Before("@mobileTest")
+	@Before("@smokeTestAmazonLogin")
 	public void beforeValidation() {
 		System.out.println("Before Mobile Test");
 	}
