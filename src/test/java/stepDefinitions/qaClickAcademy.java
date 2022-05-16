@@ -3,26 +3,31 @@ package stepDefinitions;
 import java.io.IOException;
 import java.util.List;
 
-import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
-
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.runner.RunWith;
+import org.openqa.selenium.WebDriver;
+
+import io.cucumber.datatable.DataTable;
 import io.cucumber.junit.Cucumber;
+import org.testng.Assert;
+import pageObjects.AmazonLandingPage;
+import pageObjects.AmazonLoginPage;
 import pageObjects.LandingPage;
 import pageObjects.LoginPage;
-import pratice.base;
+import resources.base;
 
 @RunWith(Cucumber.class)
-public class stepDefinition extends base {
+public class qaClickAcademy extends base {
 	LoginPage lp;
 	public WebDriver driver;
+	AmazonLandingPage amazonLandingPage;
+	AmazonLoginPage alp;
 
-	
-	 @Given("^Browser is open$")
+
+	@Given("^Browser is open$")
 	    public void browser_is_open() throws Throwable {
 	        System.out.println("Browser is open");
 	    }

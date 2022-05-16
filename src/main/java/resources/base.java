@@ -5,17 +5,25 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+//import org.testng.Assert;
+
+import javax.swing.*;
+
 
 public class base {
 	
@@ -64,5 +72,67 @@ public class base {
 		return destFile;
 		
 	}
+
+	public String getParentWindowHandle(WebDriver driver) {
+		return driver.getWindowHandle();
+	}
+
+	public void navigateURL(WebDriver driver,String url) {
+		driver.get(prop.getProperty(url));
+	}
+
+
+
+	public void switchChildWindow(WebDriver driver,String parentWindowHandle,String productName) {
+
+		Set<String> windowHandles = driver.getWindowHandles();
+		java.util.Iterator<String> itr =  windowHandles.iterator();
+
+		while(itr.hasNext()) {
+			String winhanldle = itr.next();
+			if(!winhanldle.equalsIgnoreCase(parentWindowHandle)) {
+				driver.switchTo().window(winhanldle);
+				if(driver.getCurrentUrl().contains(prop.getProperty(productName)))
+					break;
+
+			}
+		}
+
+	}
+
+
+
+
+	public void switchParentWindow(WebDriver driver,String parentWindowHandle) {
+		driver.switchTo().window(parentWindowHandle);
+
+	}
+
+	public String getTitle(WebDriver driver) {
+		return driver.getTitle();
+
+	}
+
+	public void verifyTitle(WebDriver driver,String title) {
+		String actualTitle = getTitle(driver);
+		String expectedTitle = prop.getProperty(title);
+		Assert.assertEquals(actualTitle,expectedTitle,"Wrong page title");
+
+	}
+
+	public String getProductCSS(String productText) {
+		String cssText = prop.getProperty(productText);
+		String productCSSValue = "a[href*='"+cssText+"']";
+		return productCSSValue;
+
+	}
+
+	public void mouseOver(WebDriver driver, WebElement element) {
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).build().perform();
+	}
+	
+	
+
 
 }

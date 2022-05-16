@@ -2,7 +2,7 @@ Feature: Login into Application
 
 
 
-@mobileTest	
+@smokeTest
 Scenario:
 		Given Initialize the browser with chrome 
 	And Navigate to "http://qaclickacademy.com/" Site 
@@ -29,7 +29,7 @@ Scenario Outline: Positive test validating login
 		|test79@gmail.com|129456  |true      |
 		|test69@gmail.com|127456  |true      |
 		
-		@regTest 
+		@smokeTest 
 		Scenario Outline: Negative test validating login 
 			Given Initialize the browser with chrome 
 			And Navigate to "http://qaclickacademy.com/" Site 
