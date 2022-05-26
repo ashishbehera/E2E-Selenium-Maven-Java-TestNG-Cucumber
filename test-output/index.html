@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>testngCucumber.xml</span>
+                    <span>testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -61,7 +61,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="pratice.HomeTest" class="method navigator-link" hash-for-method="basePageNavigation(non.restricted@gmail.com, 12345, Non Restricted User)">basePageNavigation(non.restricted@gmail.com, 12345, Non Restricted User)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,22 +118,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="cucumberOptions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Positive test validating login&quot;, &quot;Optional[Login into Application]&quot;)">runScenario("Positive test validating login", "Optional[Login into Application]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="cucumberOptions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Positive test validating login&quot;, &quot;Optional[Login into Application]&quot;)">runScenario("Positive test validating login", "Optional[Login into Application]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="cucumberOptions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Positive test validating login&quot;, &quot;Optional[Login into Application]&quot;)">runScenario("Positive test validating login", "Optional[Login into Application]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="cucumberOptions.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Positive test validating login&quot;, &quot;Optional[Login into Application]&quot;)">runScenario("Positive test validating login", "Optional[Login into Application]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="pratice.HomeTest" class="method navigator-link" hash-for-method="basePageNavigation(restricted.com, 67854, Restricted User)">basePageNavigation(restricted.com, 67854, Restricted User)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -134,50 +133,54 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">cucumberOptions.TestRunner</span>
+              <img src="failed.png"/>
+              <span class="class-name">pratice.HomeTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Positive test validating login&quot;, &quot;Optional[Login into Application]&quot;)">
-                  </a> <!-- runScenario("Positive test validating login", "Optional[Login into Application]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Positive test validating login", "Optional[Login into Application]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
+                  <a name="basePageNavigation(non.restricted@gmail.com, 12345, Non Restricted User)">
+                  </a> <!-- basePageNavigation(non.restricted@gmail.com, 12345, Non Restricted User) -->
+                  <span class="method-name">basePageNavigation</span>
+                  <span class="parameters">(non.restricted@gmail.com, 12345, Non Restricted User)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;https://rahulshettyacademy.com/sign_in/&quot;&gt;...&lt;/a&gt; is not clickable at point (1638, 16). Other element would receive the click: &lt;div class=&quot;listbuilder-popup-content&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=101.0.4951.64)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WKMCA7382527&apos;, ip: &apos;fe80:0:0:0:1045:86f3:f267:2e88%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;15.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.64, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /var/folders/h9/m76sbjf16zd...}, goog:chromeOptions: {debuggerAddress: localhost:58680}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a22a1050d05a02cf2c8820a914d14062
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjectsOld.LandingPage.getLogin(LandingPage.java:25)
+	at pratice.HomeTest.basePageNavigation(HomeTest.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">pratice.HomeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Positive test validating login&quot;, &quot;Optional[Login into Application]&quot;)">
-                  </a> <!-- runScenario("Positive test validating login", "Optional[Login into Application]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Positive test validating login", "Optional[Login into Application]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Positive test validating login&quot;, &quot;Optional[Login into Application]&quot;)">
-                  </a> <!-- runScenario("Positive test validating login", "Optional[Login into Application]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Positive test validating login", "Optional[Login into Application]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Positive test validating login&quot;, &quot;Optional[Login into Application]&quot;)">
-                  </a> <!-- runScenario("Positive test validating login", "Optional[Login into Application]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Positive test validating login", "Optional[Login into Application]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
+                  <a name="basePageNavigation(restricted.com, 67854, Restricted User)">
+                  </a> <!-- basePageNavigation(restricted.com, 67854, Restricted User) -->
+                  <span class="method-name">basePageNavigation</span>
+                  <span class="parameters">(restricted.com, 67854, Restricted User)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -185,7 +188,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/ashbeher/Desktop/OpenBanking/Ashish/LnD/Automation/JavaTestNGCucumberMaven/testngCucumber.xml</span>
+            <span class="header-content">/Users/ashbeher/Desktop/Personal/LnD/Automation/E2E-Selenium-Maven-Java-TestNG-Cucumber/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -193,11 +196,11 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;cucumberOptions.NGTestListeners&quot;/&gt;
+    &lt;listener class-name=&quot;pratice.Listeners&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Validating User login&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;cucumberOptions.TestRunner&quot;/&gt;
+      &lt;class name=&quot;pratice.HomeTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Validating User login --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -221,14 +224,6 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">cucumber</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">runScenario</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -245,28 +240,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'cucumberOptions.TestRunner')
-data.setCell(0, 3, 17888);
+data.setCell(0, 1, 'basePageNavigation')
+data.setCell(0, 2, 'pratice.HomeTest')
+data.setCell(0, 3, 18199);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'runScenario')
-data.setCell(1, 2, 'cucumberOptions.TestRunner')
-data.setCell(1, 3, 16821);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'runScenario')
-data.setCell(2, 2, 'cucumberOptions.TestRunner')
-data.setCell(2, 3, 16614);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'runScenario')
-data.setCell(3, 2, 'cucumberOptions.TestRunner')
-data.setCell(3, 3, 15712);
+data.setCell(1, 1, 'basePageNavigation')
+data.setCell(1, 2, 'pratice.HomeTest')
+data.setCell(1, 3, 12183);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 30 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -292,31 +279,25 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">cucumberOptions.TestRunner</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUpClass</span>
+              <div class="chronological-class-name">pratice.HomeTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
+              </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">runScenario("Positive test validating login", "Optional[Login into Application]")</span>
-                <span class="method-start">291 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">basePageNavigation(non.restricted@gmail.com, 12345, Non Restricted User)</span>
+                <span class="method-start">3336 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Positive test validating login", "Optional[Login into Application]")</span>
-                <span class="method-start">18201 ms</span>
+                <span class="method-name">basePageNavigation(restricted.com, 67854, Restricted User)</span>
+                <span class="method-start">16799 ms</span>
               </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Positive test validating login", "Optional[Login into Application]")</span>
-                <span class="method-start">34821 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Positive test validating login", "Optional[Login into Application]")</span>
-                <span class="method-start">50538 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDownClass</span>
-                <span class="method-start">67362 ms</span>
-              </div> <!-- configuration-class after -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">35001 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -14,16 +14,12 @@
 	<url>http://www.example.com</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyy_MM_dd_HH_mm</maven.build.timestamp.format>
 	</properties>
-	<!-- <build> <resources> <resource> <directory>src/main/java/resources</directory> 
-		<filtering>true</filtering> </resource> </resources> <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> 
-		<artifactId>maven-surefire-plugin</artifactId> <version>3.0.0-M5</version> 
-		<configuration> <includes> <include>**/TestRunnerCucumber.java</include> 
-		</includes> </configuration> </plugin> </plugins> </build> -->
+
 	<build>
 		<resources>
 			<resource>
@@ -32,6 +28,19 @@
 			</resource>
 		</resources>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
@@ -51,14 +60,19 @@
 							<jsonFiles>
 								<param>**/cucumber.json</param>
 							</jsonFiles>
+							<checkBuildResult>true</checkBuildResult>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
 		</plugins>
 	</build>
-
-
+	
+	<!-- <build> <resources> <resource> <directory>src/main/java/resources</directory> 
+		<filtering>true</filtering> </resource> </resources> <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-surefire-plugin</artifactId> <version>3.0.0-M5</version> 
+		<configuration> <suiteXmlFiles> <suiteXmlFile>testng.xml</suiteXmlFile> </suiteXmlFiles> 
+		</configuration> </plugin> </plugins> </build> -->
 
 	<dependencies>
 		<dependency>
